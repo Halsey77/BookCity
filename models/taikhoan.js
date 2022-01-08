@@ -16,7 +16,8 @@ module.exports = function(sequelize, DataTypes) {
       references: {
         model: 'phanquyen',
         key: 'maPhanQuyen'
-      }
+      },
+      defaultValue: '0'
     },
     hoVaTen: {
       type: DataTypes.STRING(255),
@@ -24,6 +25,11 @@ module.exports = function(sequelize, DataTypes) {
     },
     biXoa: {
       type: DataTypes.BOOLEAN,
+      allowNull: true,
+      defaultValue: false
+    },
+    matKhau: {
+      type: DataTypes.STRING(255),
       allowNull: true
     }
   }, {
