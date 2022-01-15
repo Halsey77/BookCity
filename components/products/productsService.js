@@ -9,3 +9,10 @@ exports.list = (page = 0, itemPerPage = 9) => {
         raw: true
     });
 }
+
+exports.showDetail = (ID) => {
+    return sach.findOne({
+        where: {maSach: ID},
+        raw: true
+    });
+}

@@ -6,6 +6,7 @@ exports.list = async (req, res) => {
 }
 
 exports.showDetail = async (req, res) => {
-    const productDetail = await productsService.showDetail(req.query.ID)
-    res.render('products/productdetail', {productDetail: productDetail});
+    const id = req.query.ID;
+    const productDetail = await productsService.showDetail(id)
+    res.render('productdetail', {productDetail});
 }
